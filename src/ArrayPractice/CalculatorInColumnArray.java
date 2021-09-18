@@ -18,5 +18,10 @@ public class CalculatorInColumnArray {
                 System.out.println("The size does not exceed");
             }
         } while (size <= 0);
+        array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            Scanner inputNumber = new Scanner(System.in);
+            array[i] = inputNumber.nextInt();
+        }
     }
 }
