@@ -30,6 +30,16 @@ public class CalculatorMainDiagonalArray {
                 array[i][j] = inputNumber.nextInt();
             }
         }
-        
+        int total = 0;
+        if (sizeRow < sizeColumn) {
+            for (int i = 0; i < sizeRow; i++) {
+                total += array[i][i];
+            }
+        } else {
+            for (int i = 0; i < sizeColumn; i++) {
+                total += array[i][i];
+            }
+        }
+        System.out.printf("total main diagonal of this array is: %d", total);
     }
 }
