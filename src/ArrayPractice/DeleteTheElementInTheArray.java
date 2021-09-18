@@ -45,5 +45,4 @@ public class DeleteTheElementInTheArray {
         }
         return array;
     }
-
 }
