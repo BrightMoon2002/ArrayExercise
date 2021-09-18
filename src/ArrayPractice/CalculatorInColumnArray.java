@@ -7,21 +7,28 @@ public class CalculatorInColumnArray {
         System.out.println("Author is Nguyễn Hoàng Duy - C0821H1");
         System.out.println("Creat a dimensional array and calculator in the column of this array");
 
-        int[] array;
-        int size;
+        int[][] array;
+        int sizeRow;
+        int sizeColumn;
 
         do {
-            Scanner inputSize = new Scanner(System.in);
-            System.out.println("Enter the Array size:");
-            size = inputSize.nextInt();
-            if (size <= 0) {
+            Scanner inputSizeRow = new Scanner(System.in);
+            System.out.println("Enter the Array size Row:");
+            sizeRow = inputSizeRow.nextInt();
+            Scanner inputSizeColumn = new Scanner(System.in);
+            System.out.println("Enter the Array size Column:");
+            sizeColumn = inputSizeColumn.nextInt();
+            if (sizeRow <= 0 || sizeColumn <= 0) {
                 System.out.println("The size does not exceed");
             }
-        } while (size <= 0);
-        array = new int[size];
+        } while (sizeRow <= 0 || sizeColumn <= 0);
+        array = new int[sizeRow][sizeColumn];
         for (int i = 0; i < array.length; i++) {
-            Scanner inputNumber = new Scanner(System.in);
-            array[i] = inputNumber.nextInt();
+            for (int j = 0; j < array[i].length; j++) {
+                Scanner inputNumber = new Scanner(System.in);
+                array[i][j] = inputNumber.nextInt();
+            }
+
         }
     }
 }
