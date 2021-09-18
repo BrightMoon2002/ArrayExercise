@@ -18,7 +18,12 @@ public class CheckMinInTheArray {
             }
         } while (size <= 0);
 
-        
+        array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            Scanner inputNumber = new Scanner(System.in);
+            System.out.println("Enter the number in the index" + i);
+            array[i] = inputNumber.nextInt();
+        }
     }
 }
 }
