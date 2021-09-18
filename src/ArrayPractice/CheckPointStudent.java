@@ -32,7 +32,7 @@ public class CheckPointStudent {
     private static int checkCount(int[] array) {
         int count = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] >= 5) {
+            if (array[i] >= 5 && array[i] <= 10) {
                 count++;
             }
         }
