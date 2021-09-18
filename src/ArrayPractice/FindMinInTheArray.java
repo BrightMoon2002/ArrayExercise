@@ -18,10 +18,10 @@ public class FindMinInTheArray {
         do {
             System.out.println("Enter the size of array:");
             size = scanner.nextInt();
-            if (size > 100) {
-                System.out.println("Size doesnt exceed 100");
+            if (size <= 0) {
+                System.out.println("Size doesnt exceed less 0");
             }
-        } while (size > 100);
+        } while (size <= 0);
         array = new int[size];
         int i;
         for (i = 0; i < array.length; i++) {
