@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class ElementInArray {
     public static void main(String[] args) {
-        System.out.println("Find the element in the Arrays");
         System.out.println("Author is Nguyễn Hoàng Duy - C0821H1");
+        System.out.println("Find the element in the Arrays");
         String student[] = {"Long", "Toàn", "Thảo", "Tuấn", "Duy"};
         Scanner scanner = new Scanner(System.in);
         do {
