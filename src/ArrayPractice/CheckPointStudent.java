@@ -19,6 +19,11 @@ public class CheckPointStudent {
         } while (size > 30 || size <= 0);
 
         array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            Scanner point = new Scanner(System.in);
+            System.out.println("Enter the point of the student " + i);
+            array[i] = point.nextInt();
+        }
 
     }
 }
