@@ -27,15 +27,23 @@ public class CalculatorInColumnArray {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 Scanner inputNumber = new Scanner(System.in);
+                System.out.println("Enter the number in the index:" + i + ", " + j);
                 array[i][j] = inputNumber.nextInt();
             }
         }
         Scanner inputIndexColumn = new Scanner(System.in);
+        System.out.println("Enter the index of Column which you want to calculator:");
         int indexColumn = inputIndexColumn.nextInt();
+
+        int total = getTotal(array, indexColumn);
+        System.out.printf("Total of element in column %d is %d", indexColumn, total);
+    }
+
+    private static int getTotal(int[][] array, int indexColumn) {
         int total = 0;
         for (int i = 0; i < array.length; i++) {
             total += array[i][indexColumn];
         }
-        
+        return total;
     }
 }
