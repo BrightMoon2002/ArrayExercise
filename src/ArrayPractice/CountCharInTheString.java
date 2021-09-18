@@ -13,11 +13,11 @@ public class CountCharInTheString {
         string = inputString.nextLine();
         char word = 't';
         try{
-            System.out.println("Moi ban nhap 1 ky tu");
+            System.out.println("Enter the Char");
             word = (char) System.in.read();
-            System.out.println("Ky tu vua nhap:" + word); // đưa lên đây để khi read() gặp lỗi nó sẽ không in ký tự mặc định.
+            System.out.println("Your word you choose is: " + word); // đưa lên đây để khi read() gặp lỗi nó sẽ không in ký tự mặc định.
         }catch(Exception e){
-            System.out.println("Nhap loi!");
+            System.out.println("Renter!");
         }
         //check length of string System.out.println(string.length());
         int result = getCount(string, word);
