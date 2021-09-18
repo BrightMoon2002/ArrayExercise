@@ -24,10 +24,17 @@ public class CheckMinInTheArray {
             System.out.println("Enter the number in the index" + i);
             array[i] = inputNumber.nextInt();
         }
+        System.out.printf("%d is the Min of the Array", checkMin(array));
+    }
 
+    private static int checkMin(int[] array) {
         int min = array[0];
-        
-
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        return min;
     }
 }
 
