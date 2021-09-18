@@ -24,6 +24,10 @@ public class CheckMinInTheArray {
             System.out.println("Enter the number in the index" + i);
             array[i] = inputNumber.nextInt();
         }
+
+        int min = array[0];
+        
+
     }
 }
 
