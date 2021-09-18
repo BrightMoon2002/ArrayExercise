@@ -25,5 +25,17 @@ public class CheckPointStudent {
             array[i] = point.nextInt();
         }
 
+        System.out.printf("There are %d Students who pass the exam", checkCount(array));
+
+    }
+
+    private static int checkCount(int[] array) {
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] >= 5) {
+                count++;
+            }
+        }
+        return count;
     }
 }
