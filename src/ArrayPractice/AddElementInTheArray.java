@@ -19,17 +19,19 @@ public class AddElementInTheArray {
         array = new int[size];
         for (int i = 0; i < size; i++) {
             Scanner inputToArray = new Scanner(System.in);
-            System.out.println("Enter the number in the index" + (i +1));
+            System.out.println("Enter the number in the index" + (i + 1));
             int num = inputToArray.nextInt();
             array[i] = num;
         }
-        int[] newArray = new int[size+1];
+        int[] newArray = new int[size + 1];
         Scanner inputNumber = new Scanner(System.in);
         System.out.println("Enter the number:");
         int number = inputNumber.nextInt();
         Scanner inputIndex = new Scanner(System.in);
         System.out.println("Enter the index:");
         int index = inputIndex.nextInt();
+        index = checkInt(0, array.length);
+
         int i, c;
         for (c = i = 0; i < newArray.length; i++) {
             if (index != i) {
@@ -40,8 +42,24 @@ public class AddElementInTheArray {
             }
         }
 
-        for (int k = 0; k < size+1; k++) {
+        for (int k = 0; k < size + 1; k++) {
             System.out.print(newArray[k] + "\t");
+        }
+    }
+
+    public static int checkInt(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            try {
+                int n = Integer.parseInt(sc.nextLine().trim());
+                if (n < min || n > max) {
+                    throw new NumberFormatException();
+                }
+                return n;
+            } catch (NumberFormatException e) {
+                System.err.println("Please input a integer in rage [" + min + ", " + max + "]");
+                System.out.print("Enter again: ");
+            }
         }
     }
 }
